@@ -2,7 +2,6 @@
 import pandas as pd
 import requests
 
-print("start")
 
 # variables
 auth_url = 'https://accounts.spotify.com/api/token'
@@ -72,6 +71,3 @@ def get_related_tracks(df_related_artists, header):
     # join related artist and track related artist to merge info
     df_related_tracks = pd.merge(df_related_tracks, df_related_artists, on='related_id')
     return df_related_tracks
-
-
-print("end")
